@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CleanTrack – Report Waste Issue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>🧹 CleanTrack – Report a Waste Issue</h2>
+
+  <form action="submit.php" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" required>
+
+    <label for="pincode">Area Pincode:</label>
+    <input type="text" name="pincode" required pattern="\d{6}" title="Enter 6-digit pincode">
+
+    <label for="issue_type">Issue Type:</label>
+    <select name="issue_type" required>
+      <option value="">-- Select --</option>
+      <option value="Garbage Overflow">Garbage Overflow</option>
+      <option value="Uncollected Waste">Uncollected Waste</option>
+      <option value="Illegal Dumping">Illegal Dumping</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="description">Description:</label>
+    <textarea name="description" rows="4" required></textarea>
+
+    <button type="submit">Submit Report</button>
+  </form>
+</body>
+</html>
